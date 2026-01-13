@@ -1,10 +1,9 @@
 import React, { useContext, useState } from "react"
-import axios from "axios"
 import toast from "react-hot-toast"
 import { useNavigate } from "react-router-dom"
 import { Context } from "../../main"
 import { useScrollAnimation } from "../../hooks/useScrollAnimation"
-
+import api from "../../api"
 const PostJob = () => {
   const [title, setTitle] = useState("")
   const [description, setDescription] = useState("")
@@ -36,8 +35,8 @@ const PostJob = () => {
     }
 
     try {
-      const res = await axios.post(
-        "http://localhost:4000/api/v1/job/post",
+      const res = await api.post(
+        "/api/v1/job/post",
         fixedSalary.length >= 4
           ? {
               title,

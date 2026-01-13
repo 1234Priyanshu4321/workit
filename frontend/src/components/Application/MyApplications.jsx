@@ -1,10 +1,11 @@
 import React, { useContext, useEffect, useState } from "react"
 import { Context } from "../../main"
-import axios from "axios"
+import api from "../../api"
 import toast from "react-hot-toast"
 import { useNavigate } from "react-router-dom"
 import ResumeModal from "./ResumeModal"
 import { useScrollAnimation } from "../../hooks/useScrollAnimation"
+import api from "../../api"
 
 const MyApplications = () => {
   const { user, isAuthorized } = useContext(Context)
@@ -18,10 +19,10 @@ const MyApplications = () => {
     const fetchApplications = async () => {
       try {
         const endpoint = user && user.role === "Employer"
-          ? "http://localhost:4000/api/v1/application/employer/getall"
-          : "http://localhost:4000/api/v1/application/jobseeker/getall"
+          ? "/api/v1/application/employer/getall"
+          : "/api/v1/application/jobseeker/getall"
         
-        const res = await axios.get(endpoint, {
+        const res = await api.get(endpoint, {
           withCredentials: true,
         })
         setApplications(res.data.applications)
@@ -39,7 +40,7 @@ const MyApplications = () => {
 
   const deleteApplication = async (id) => {
     try {
-      const res = await axios.delete(`http://localhost:4000/api/v1/application/delete/${id}`, {
+      const res = await api.delete(`/api/v1/application/delete/${id}`, {
         withCredentials: true,
       })
       toast.success(res.data.message)

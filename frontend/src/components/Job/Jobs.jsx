@@ -1,9 +1,8 @@
 import React, { useContext, useEffect, useState } from "react"
-import axios from "axios"
 import { Link, useNavigate } from "react-router-dom"
 import { Context } from "../../main"
 import { useScrollAnimation } from "../../hooks/useScrollAnimation"
-
+import api from "../../api"
 const Jobs = () => {
   const [jobs, setJobs] = useState([])
   const { isAuthorized } = useContext(Context)
@@ -13,7 +12,7 @@ const Jobs = () => {
   useEffect(() => {
     const fetchJobs = async () => {
       try {
-        const res = await axios.get("http://localhost:4000/api/v1/job/getall", {
+        const res = await api.get("/api/v1/job/getall", {
           withCredentials: true,
         })
         setJobs(res.data)

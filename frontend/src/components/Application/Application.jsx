@@ -1,10 +1,9 @@
-import axios from "axios"
 import React, { useContext, useState } from "react"
 import toast from "react-hot-toast"
 import { useNavigate, useParams } from "react-router-dom"
 import { Context } from "../../main"
 import { useScrollAnimation } from "../../hooks/useScrollAnimation"
-
+import api from "../../api"
 const Application = () => {
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
@@ -69,8 +68,8 @@ const Application = () => {
     formData.append("jobId", id)
 
     try {
-      const { data } = await axios.post(
-        "http://localhost:4000/api/v1/application/post",
+      const { data } = await api.post(
+        "/api/v1/application/post",
         formData,
         {
           withCredentials: true,

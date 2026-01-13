@@ -5,7 +5,6 @@ import { BrowserRouter, Route, Routes } from "react-router-dom"
 import Login from "./components/Auth/Login"
 import Register from "./components/Auth/Register"
 import { Toaster } from "react-hot-toast"
-import axios from "axios"
 import Navbar from "./components/Layout/Navbar"
 import Footer from "./components/Layout/Footer"
 import Home from "./components/Home/Home"
@@ -16,6 +15,7 @@ import MyApplications from "./components/Application/MyApplications"
 import PostJob from "./components/Job/PostJob"
 import NotFound from "./components/NotFound/NotFound"
 import MyJobs from "./components/Job/MyJobs"
+import api from "./api"
 
 const App = () => {
   const { isAuthorized, setIsAuthorized, setUser } = useContext(Context)
@@ -23,8 +23,8 @@ const App = () => {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const response = await axios.get(
-          "http://localhost:4000/api/v1/user/getuser",
+        const response = await api.get(
+          "/api/v1/user/getuser",
           {
             withCredentials: true,
           }
