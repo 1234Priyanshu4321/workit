@@ -5,7 +5,6 @@ import toast from "react-hot-toast"
 import { useNavigate } from "react-router-dom"
 import ResumeModal from "./ResumeModal"
 import { useScrollAnimation } from "../../hooks/useScrollAnimation"
-import api from "../../api"
 
 const MyApplications = () => {
   const { user, isAuthorized } = useContext(Context)
