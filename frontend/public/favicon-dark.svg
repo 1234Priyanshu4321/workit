@@ -1,0 +1,11 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="64" height="64" rx="12" fill="#1a1a1a"/>
+  <!-- Briefcase icon -->
+  <rect x="18" y="22" width="28" height="18" rx="2" fill="#c9a961" opacity="0.2"/>
+  <rect x="20" y="24" width="24" height="14" rx="1" fill="none" stroke="#c9a961" stroke-width="1.5"/>
+  <path d="M 28 24 L 28 18 L 36 18 L 36 24" stroke="#c9a961" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <circle cx="30" cy="20" r="1" fill="#c9a961"/>
+  <circle cx="34" cy="20" r="1" fill="#c9a961"/>
+  <!-- WI Text -->
+  <text x="32" y="52" font-family="Playfair Display, serif" font-size="14" font-weight="700" fill="#c9a961" text-anchor="middle">WI</text>
+</svg>

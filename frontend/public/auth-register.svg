@@ -1,0 +1,37 @@
+<svg width="550" height="550" viewBox="0 0 550 550" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="550" height="550" fill="#0f0f0f"/>
+  
+  <!-- Main illustration area -->
+  <rect x="50" y="50" width="450" height="450" rx="30" fill="#1a1a1a" stroke="#c9a961" stroke-width="2" opacity="0.5"/>
+  
+  <!-- Registration illustration - person with document -->
+  <circle cx="275" cy="200" r="60" fill="#2a2a2a" stroke="#c9a961" stroke-width="3"/>
+  <circle cx="275" cy="180" r="25" fill="#c9a961" opacity="0.3"/>
+  
+  <!-- Document/form illustration -->
+  <rect x="200" y="280" width="150" height="120" rx="5" fill="#2a2a2a" stroke="#c9a961" stroke-width="2"/>
+  <line x1="220" y1="310" x2="320" y2="310" stroke="#c9a961" stroke-width="2" opacity="0.5"/>
+  <line x1="220" y1="340" x2="300" y2="340" stroke="#c9a961" stroke-width="2" opacity="0.5"/>
+  <line x1="220" y1="370" x2="280" y2="370" stroke="#c9a961" stroke-width="2" opacity="0.5"/>
+  
+  <!-- Pen/pencil illustration -->
+  <line x1="360" y1="280" x2="360" y2="360" stroke="#c9a961" stroke-width="4" stroke-linecap="round"/>
+  <path d="M 360 280 L 375 265" stroke="#c9a961" stroke-width="3" stroke-linecap="round"/>
+  
+  <!-- Checkmark -->
+  <circle cx="380" cy="320" r="20" fill="#7a9b7a" opacity="0.3"/>
+  <path d="M 372 320 L 378 326 L 388 310" stroke="#7a9b7a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  
+  <!-- Decorative elements -->
+  <circle cx="150" cy="150" r="3" fill="#c9a961" opacity="0.4"/>
+  <circle cx="400" cy="150" r="3" fill="#c9a961" opacity="0.4"/>
+  
+  <!-- Text elements -->
+  <text x="275" y="430" font-family="Playfair Display, serif" font-size="24" fill="#c9a961" text-anchor="middle" opacity="0.6">Create Account</text>
+  <text x="275" y="460" font-family="Inter, sans-serif" font-size="16" fill="#b8b8b8" text-anchor="middle" opacity="0.5">Join us today</text>
+  
+  <!-- Decorative dots -->
+  <circle cx="120" cy="450" r="4" fill="#c9a961" opacity="0.4"/>
+  <circle cx="430" cy="450" r="4" fill="#c9a961" opacity="0.4"/>
+  <circle cx="275" cy="500" r="4" fill="#c9a961" opacity="0.4"/>
+</svg>
